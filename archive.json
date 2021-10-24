@@ -1,0 +1,390 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2021-10-24T00:56:35.359555+00:00",
+  "repo": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 2,
+      "id": "I_kwDOGI5hMc49SAjb",
+      "title": "We seem to ignore the lessons learned and documented in RFC 6648 (\u201cx-dash\u201d).",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/2",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-10-16T19:35:41Z",
+      "updatedAt": "2021-10-21T07:18:15Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "(SEDATE meeting:) Could get rid of all namespaceing, could define procedure well enough we no longer need x-\r\n",
+          "createdAt": "2021-10-20T16:39:06Z",
+          "updatedAt": "2021-10-20T16:39:06Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "(Removing namespacing would remove about half of the text.)",
+          "createdAt": "2021-10-20T16:41:00Z",
+          "updatedAt": "2021-10-20T16:41:00Z"
+        },
+        {
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "body": "CCing SEDATE\n\nOn 20/10/2021 22.11, cabo wrote:\n> (Removing namespacing would remove about half of the text.)\n\nYes, but then any additional information that could be included would \nneed a full RFC cycle. One of the main motivations behind this was to \nlower the barrier so that people don't deviate from the standards track \nlike they did for timezones.\n",
+          "createdAt": "2021-10-21T06:38:57Z",
+          "updatedAt": "2021-10-21T06:38:57Z"
+        },
+        {
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "body": "Also CCing other stakeholders directly for greater visibility.\n",
+          "createdAt": "2021-10-21T07:12:53Z",
+          "updatedAt": "2021-10-21T07:12:53Z"
+        },
+        {
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "body": "On 2021-10-21, at 08:38, Ujjwal Sharma ***@***.***> wrote:\n> \n> CCing SEDATE\n\nI\u2019m not sure we want all the discussion copied between both GitHub and the mailing list, but I\u2019ll stick with this until the chairs intervene.\n\n> On 20/10/2021 22.11, cabo wrote:\n>> (Removing namespacing would remove about half of the text.)\n> \n> Yes, but then any additional information that could be included would need a full RFC cycle.\n\nThere is space between not having extensibility at all and having a complicated way to registering namespaces where extensions can then be registered.\n\nWhy don\u2019t we just register extensions?\n\n> One of the main motivations behind this was to lower the barrier so that people don't deviate from the standards track like they did for timezones.\n\nExactly.\n\nMake a registry for extensions, not for namespaces for extensions.\nThink hard about the RFC 8126 policies applying to this (we can distinguish different policies for different kinds of names).\n\nGr\u00fc\u00dfe, Carsten\n\n",
+          "createdAt": "2021-10-21T07:18:15Z",
+          "updatedAt": "2021-10-21T07:18:15Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOGI5hMc49fIsa",
+      "title": "What is the meaning of adding a timezone to a timestamp",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/3",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "The current draft does not say what it actually means when a timezone name is added to a timestamp.\r\n\r\nIs the combination of the timezone name and the timezone offset an assertion that the offset was correct for the named timezone at the time?\r\n\r\nWhat if that assertion is not true?\r\n\r\nWhat about future times?  Does the timezone name take precedence over the offset given (i.e., the timestamp changes its meaning with political decisions) or does the offset win?\r\n",
+      "createdAt": "2021-10-20T15:52:39Z",
+      "updatedAt": "2021-10-20T16:31:53Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "(From the SEDATE meeting: \"encode the intention\"?)\r\n",
+          "createdAt": "2021-10-20T16:30:36Z",
+          "updatedAt": "2021-10-20T16:30:36Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "(From the SEDATE meeting: \"don't encode the timezone if that is not the overriding information\".)\r\n\r\nOne use case is documenting the time zone name, though.",
+          "createdAt": "2021-10-20T16:31:53Z",
+          "updatedAt": "2021-10-20T16:31:53Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOGI5hMc49fPax",
+      "title": "Need at least one extension defined so we can have good examples",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/4",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "(Ned Freed)",
+      "createdAt": "2021-10-20T16:21:26Z",
+      "updatedAt": "2021-10-20T16:21:26Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOGI5hMc49fQM_",
+      "title": "Optimized for users or for programs?",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/5",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Did we ever say whether this is for human end-users or just an internal programming thing?  \r\n\r\nIn the latter case, we possibly can limit this to ASCII.  \r\nIn the former case, we are opening the big box of Pandora of UTF-8.",
+      "createdAt": "2021-10-20T16:25:12Z",
+      "updatedAt": "2021-10-20T16:25:12Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOGI5hMc49fSIc",
+      "title": "Are TZDB identifiers stable enough?",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/6",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Is it wise to base this on tzdb identifiers, given tzdb community does not acknowldge identifiers to be managed artifacts, but mere byproducts?\r\n\r\nList of valid identifiers is not under control of this specification.\r\n\r\n(Hans-J\u00f6rg Happel)",
+      "createdAt": "2021-10-20T16:33:19Z",
+      "updatedAt": "2021-10-20T16:49:45Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "cabo: Is solving the TZ conundrum on our charter?\r\n\r\nBron: Thankfully not!  But we need to decide what to reference\r\n\r\nJohn Klensin: Carsten, I hope we can at least describe that conundrum well enough that it is understood.  Solving it is obviously a whole different matter.",
+          "createdAt": "2021-10-20T16:49:45Z",
+          "updatedAt": "2021-10-20T16:49:45Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOGI5hMc49fUA2",
+      "title": "Support Floating time?",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/7",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "i.e., time without a specified timezone.\r\n",
+      "createdAt": "2021-10-20T16:42:28Z",
+      "updatedAt": "2021-10-20T16:47:54Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "Ujjwal: could special-case Z as opposed to +0000 (to mean J).",
+          "createdAt": "2021-10-20T16:43:31Z",
+          "updatedAt": "2021-10-20T16:45:03Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "(that would be incompatible to, e.g., icalendar)",
+          "createdAt": "2021-10-20T16:43:51Z",
+          "updatedAt": "2021-10-20T16:44:31Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "John Klensin: \"\"ingenious\" gives me the creeps.  If we need to do something, let's make it explicit and avoid heuristics or cleverness to which people will need to adapt.\"",
+          "createdAt": "2021-10-20T16:47:54Z",
+          "updatedAt": "2021-10-20T16:47:54Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOGI5hMc49fWKe",
+      "title": "Do we want to support timescales?",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/8",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-10-20T16:53:07Z",
+      "updatedAt": "2021-10-20T17:00:45Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "(My answer: yes.  Generally speaking, all the information in https://www.ietf.org/archive/id/draft-ietf-cbor-time-tag-00.html is a candidate for inclusion, so we get parity between text and binary forms again.)\r\n",
+          "createdAt": "2021-10-20T16:54:48Z",
+          "updatedAt": "2021-10-20T16:54:48Z"
+        },
+        {
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "body": "CCing SEDATE ML to this.\n\nOn 20/10/2021 22.24, cabo wrote:\n> (My answer: yes. Generally speaking, all the information in \n> https://www.ietf.org/archive/id/draft-ietf-cbor-time-tag-00.html \n> <https://www.ietf.org/archive/id/draft-ietf-cbor-time-tag-00.html> is a \n> candidate for inclusion, so we get parity between text and binary forms \n> again.)\n> \n> \u2014\n> You are receiving this because you are subscribed to this thread.\n> Reply to this email directly, view it on GitHub \n> <https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/8#issuecomment-947853434>, \n> or unsubscribe \n> <https://github.com/notifications/unsubscribe-auth/ADEDOMQSGEDSCYAU6LEBA43UH3X6HANCNFSM5GMDR3VA>.\n> \n\n-- \nUjjwal \"Ryzokuken\" Sharma (he/him)\n\nCompilers Hacker, Node.js Core Collaborator and Speaker\n",
+          "createdAt": "2021-10-20T17:00:45Z",
+          "updatedAt": "2021-10-20T17:00:45Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOGI5hMc49iGCs",
+      "title": "We need to name the baby",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/issues/9",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "We need a name that people will use until they can say RFC9999 timestamps (and maybe even when they can).\r\n",
+      "createdAt": "2021-10-21T10:55:43Z",
+      "updatedAt": "2021-10-21T10:55:43Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOGI5hMc4tSESg",
+      "title": "Editorial round 1",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/pull/1",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-10-16T19:24:31Z",
+      "updatedAt": "2021-10-20T11:46:40Z",
+      "baseRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
+      "baseRefName": "main",
+      "baseRefOid": "3dfe8ad57372de6268af2cd825b5712e01a77241",
+      "headRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
+      "headRefName": "editorial-round-1",
+      "headRefOid": "3594d116e79eed05b8d2c0b395d846f4b2f0e29b",
+      "closedAt": "2021-10-20T09:02:28Z",
+      "mergedAt": "2021-10-20T09:02:28Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "0a6181f31a6748dd381fc80336ce567f03247914"
+      },
+      "comments": [
+        {
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "body": "I looked through the inline comments as well. Should we file issues for all of these?",
+          "createdAt": "2021-10-20T11:14:51Z",
+          "updatedAt": "2021-10-20T11:14:51Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "On 2021-10-20, at 13:15, Ujjwal Sharma ***@***.***> wrote:\n> \n> I looked through the inline comments as well. Should we file issues for all of these?\n\nI think we should have a quick check if we can resolve any of these between us, and then make issues.\n\nGr\u00fc\u00dfe, Carsten\n\n",
+          "createdAt": "2021-10-20T11:24:48Z",
+          "updatedAt": "2021-10-20T11:24:48Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "\n\n> On 2021-10-20, at 13:24, Carsten Bormann ***@***.***> wrote:\n> \n> On 2021-10-20, at 13:15, Ujjwal Sharma ***@***.***> wrote:\n>> \n>> I looked through the inline comments as well. Should we file issues for all of these?\n> \n> I think we should have a quick check if we can resolve any of these between us, and then make issues.\n\n(Many of the comments are really editorial.\nE.g., if you have a \u201cBCP47 extensions registry\u201d in mind, we can simply point to that; I just couldn\u2019t find that.)\n\nI think I\u2019ll submit the -01 now anyway, so we do have a new version to look at for the interim.\n\nGr\u00fc\u00dfe, Carsten\n\n\n\n",
+          "createdAt": "2021-10-20T11:37:05Z",
+          "updatedAt": "2021-10-20T11:37:05Z"
+        },
+        {
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "body": "Perfect, thanks. I'll try to see how many of the comments can be trivially resolved.",
+          "createdAt": "2021-10-20T11:38:29Z",
+          "updatedAt": "2021-10-20T11:38:29Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "Please confirm -01; we can submit a -02 quickly after that (I-D deadline 2021-10-25!).",
+          "createdAt": "2021-10-20T11:42:32Z",
+          "updatedAt": "2021-10-20T11:42:32Z"
+        },
+        {
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "body": "-01 is published \\o/",
+          "createdAt": "2021-10-20T11:46:40Z",
+          "updatedAt": "2021-10-20T11:46:40Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGI5hMc4uvt8U",
+          "commit": {
+            "abbreviatedOid": "5fa3d18"
+          },
+          "author": "ryzokuken",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "Perfect, thanks for the changes! They look great, and I apologize for the issues especially with the references, Metanorma was not making my life any easier.",
+          "createdAt": "2021-10-20T09:56:54Z",
+          "updatedAt": "2021-10-20T11:14:25Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Why'd you move this in the middle of the definition body?",
+              "createdAt": "2021-10-20T09:56:54Z",
+              "updatedAt": "2021-10-20T11:14:26Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": "Thanks, this was as ugly as it was due to all the weird quirks in metanorma.",
+              "createdAt": "2021-10-20T09:58:09Z",
+              "updatedAt": "2021-10-20T11:14:26Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "oh, I see that this was fixed later",
+              "createdAt": "2021-10-20T09:58:53Z",
+              "updatedAt": "2021-10-20T11:14:26Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": ":100: ",
+              "createdAt": "2021-10-20T09:59:27Z",
+              "updatedAt": "2021-10-20T11:14:26Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
