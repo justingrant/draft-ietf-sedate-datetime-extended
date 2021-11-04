@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-10-24T00:56:35.359555+00:00",
+  "timestamp": "2021-11-04T00:55:06.561690+00:00",
   "repo": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
   "labels": [
     {
@@ -62,7 +62,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2021-10-16T19:35:41Z",
-      "updatedAt": "2021-10-21T07:18:15Z",
+      "updatedAt": "2021-11-03T17:23:26Z",
       "closedAt": null,
       "comments": [
         {
@@ -99,6 +99,13 @@
           "body": "On 2021-10-21, at 08:38, Ujjwal Sharma ***@***.***> wrote:\n> \n> CCing SEDATE\n\nI\u2019m not sure we want all the discussion copied between both GitHub and the mailing list, but I\u2019ll stick with this until the chairs intervene.\n\n> On 20/10/2021 22.11, cabo wrote:\n>> (Removing namespacing would remove about half of the text.)\n> \n> Yes, but then any additional information that could be included would need a full RFC cycle.\n\nThere is space between not having extensibility at all and having a complicated way to registering namespaces where extensions can then be registered.\n\nWhy don\u2019t we just register extensions?\n\n> One of the main motivations behind this was to lower the barrier so that people don't deviate from the standards track like they did for timezones.\n\nExactly.\n\nMake a registry for extensions, not for namespaces for extensions.\nThink hard about the RFC 8126 policies applying to this (we can distinguish different policies for different kinds of names).\n\nGr\u00fc\u00dfe, Carsten\n\n",
           "createdAt": "2021-10-21T07:18:15Z",
           "updatedAt": "2021-10-21T07:18:15Z"
+        },
+        {
+          "author": "sffc",
+          "authorAssociation": "NONE",
+          "body": "CC @sffc @macchiati to comment about namespacing and extensions.",
+          "createdAt": "2021-11-03T17:23:26Z",
+          "updatedAt": "2021-11-03T17:23:26Z"
         }
       ]
     },
