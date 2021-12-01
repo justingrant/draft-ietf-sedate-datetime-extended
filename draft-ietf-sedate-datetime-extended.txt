@@ -23,8 +23,8 @@ Discussion Venues
    This note is to be removed before publishing as an RFC.
 
    Discussion of this document takes place on the Serialising Extended
-   Data About Times and Events Working Group mailing list
-   (sedate@ietf.org), which is archived at
+   Data About Times and Events (SEDATE) Working Group mailing list
+   (mailto:sedate@ietf.org), which is archived at
    https://mailarchive.ietf.org/arch/browse/sedate/.
 
    Source for this draft and an issue tracker can be found at
