@@ -133,13 +133,13 @@ Table of Contents
       for attempting to follow Universal Time based on measuring the
       rotation of the earth.
 
-      UTC is often mistakenly referred to as GMT, an earlier time scale
+      UTC is often mistakenly referred to as GMT, an earlier timescale
       UTC was designed to be a useful successor for.
 
    ABNF:  Augmented Backus-Naur Form, a format used to represent
       permissible strings in a protocol or language, as defined in
       [RFC5234].  The rules defined in Appendix B of [RFC5234] are
-      imported implictly.
+      imported implicitly.
 
    Internet Date/Time Format:  The date/time format defined in section 3
       of this document.
@@ -372,7 +372,7 @@ Table of Contents
 
                 Figure 5: Projecting to the Hebrew calendar
 
-   Figure 5 represents the exact same instant but it informs calendar-
+   Figure 5 represents the exact same instant, but it informs calendar-
    aware implementations that they should project it to the Hebrew
    calendar.
 
