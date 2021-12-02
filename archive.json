@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-11-04T00:55:06.561690+00:00",
+  "timestamp": "2021-12-02T00:56:46.316044+00:00",
   "repo": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
   "labels": [
     {
@@ -392,6 +392,58 @@
           ]
         }
       ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOGI5hMc4vRfUq",
+      "title": "Define scope as per IETF 112.",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/pull/10",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-12-01T21:08:23Z",
+      "updatedAt": "2021-12-01T21:08:52Z",
+      "baseRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
+      "baseRefName": "main",
+      "baseRefOid": "aeb6e98db411857ff87b30e2ce9b9c9a7cd3db7f",
+      "headRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
+      "headRefName": "scope",
+      "headRefOid": "6b4eabefb7398c6584ad1db99f8bfe4477675320",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOGI5hMc4vRquH",
+      "title": "Rough draft of simplified key/namespace handling.",
+      "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/pull/11",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-12-01T22:19:12Z",
+      "updatedAt": "2021-12-01T22:19:13Z",
+      "baseRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
+      "baseRefName": "main",
+      "baseRefOid": "aeb6e98db411857ff87b30e2ce9b9c9a7cd3db7f",
+      "headRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
+      "headRefName": "simplify-key-registration",
+      "headRefOid": "d843f20235d2a9d822b889ec855ce46b573b31b0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
