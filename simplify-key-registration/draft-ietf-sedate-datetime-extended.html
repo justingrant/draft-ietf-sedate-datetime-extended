@@ -1018,7 +1018,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Sharma &amp; Bormann</td>
-<td class="center">Expires 4 June 2022</td>
+<td class="center">Expires 6 June 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1031,12 +1031,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-ietf-sedate-datetime-extended-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2021-12-01" class="published">1 December 2021</time>
+<time datetime="2021-12-03" class="published">3 December 2021</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-06-04">4 June 2022</time></dd>
+<dd class="expires"><time datetime="2022-06-06">6 June 2022</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1058,16 +1058,18 @@ RFC3339 for representing additional information including a time
 zone.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
-      <h2 id="name-discussion-venues">
-<a href="#name-discussion-venues" class="section-name selfRef">Discussion Venues</a>
+      <h2 id="name-about-this-document">
+<a href="#name-about-this-document" class="section-name selfRef">About This Document</a>
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended/">https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+<p id="section-note.1-3">
         Discussion of this document takes place on the
         Serialising Extended Data About Times and Events (SEDATE) Working Group mailing list (<span><a href="mailto:sedate@ietf.org">mailto:sedate@ietf.org</a></span>),
-        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/sedate/">https://mailarchive.ietf.org/arch/browse/sedate/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
-<p id="section-note.1-3">Source for this draft and an issue tracker can be found at
-        <span><a href="https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended">https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/sedate/">https://mailarchive.ietf.org/arch/browse/sedate/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+<p id="section-note.1-4">Source for this draft and an issue tracker can be found at
+        <span><a href="https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended">https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1088,7 +1090,7 @@ zone.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 4 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1141,7 +1143,10 @@ zone.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-syntax-extensions-to-rfc-33" class="xref">Syntax Extensions to RFC 3339</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
-                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="xref">4.1</a>.  <a href="#name-examples" class="xref">Examples</a></p>
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="xref">4.1</a>.  <a href="#name-abnf" class="xref">ABNF</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="xref">4.2</a>.  <a href="#name-examples" class="xref">Examples</a></p>
 </li>
             </ul>
 </li>
@@ -1405,12 +1410,20 @@ mailing list used by the maintaining authority.<a href="#section-3.3-10" class="
       <h2 id="name-syntax-extensions-to-rfc-33">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-syntax-extensions-to-rfc-33" class="section-name selfRef">Syntax Extensions to RFC 3339</a>
       </h2>
-<p id="section-4-1">The following rules extend the ABNF syntax defined in <span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> in
-order to allow the inclusion of an optional suffix: the extended
-date/time format is described by the rule <code>date-time-ext</code>.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<div id="abnf">
+<section id="section-4.1">
+        <h3 id="name-abnf">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-abnf" class="section-name selfRef">ABNF</a>
+        </h3>
+<p id="section-4.1-1">The following rules extend the ABNF syntax defined in <span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> in
+order to allow the inclusion of an optional suffix.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">The extended date/time format is described by the rule
+<code>date-time-ext</code>.
+<code>date-time</code> is imported from <span><a href="https://rfc-editor.org/rfc/rfc3339#section-5.6" class="relref">Section 5.6</a> of [<a href="#RFC3339" class="xref">RFC3339</a>]</span>, <code>ALPHA</code> and
+<code>DIGIT</code> from <span><a href="https://rfc-editor.org/rfc/rfc5234#appendix-B.1" class="relref">Appendix B.1</a> of [<a href="#RFC5234" class="xref">RFC5234</a>]</span>.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 <span id="name-abnf-grammar-of-extensions-"></span><div id="grammar">
 <figure id="figure-2">
-        <div id="section-4-2.1">
+          <div id="section-4.1-3.1">
 <pre class="lang-abnf sourcecode">
 time-zone-initial = ALPHA / "." / "_"
 time-zone-char    = time-zone-initial / DIGIT / "-" / "+"
@@ -1435,20 +1448,22 @@ alphanum          = ALPHA / DIGIT
 </div>
 <figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
 <a href="#name-abnf-grammar-of-extensions-" class="selfRef">ABNF grammar of extensions to RFC 3339</a>
-        </figcaption></figure>
+          </figcaption></figure>
 </div>
-<p id="section-4-3">Note that a <code>time-zone</code> is syntactically similar to a <code>suffix-tag</code>,
+<p id="section-4.1-4">Note that a <code>time-zone</code> is syntactically similar to a <code>suffix-tag</code>,
 but does not use a <code>suffix-key</code> and an equals sign.
-This special case is only available for timezone tags.<a href="#section-4-3" class="pilcrow">¶</a></p>
+This special case is only available for timezone tags.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
 <div id="date-time-examples">
-<section id="section-4.1">
+<section id="section-4.2">
         <h3 id="name-examples">
-<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
         </h3>
-<p id="section-4.1-1">Here are some examples of Internet extended date/time format.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-1">Here are some examples of Internet extended date/time format.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <span id="name-rfc-3339-date-time-with-tim"></span><div id="rfc3339-datetime">
 <figure id="figure-3">
-          <div class="alignLeft art-text artwork" id="section-4.1-2.1">
+          <div class="alignLeft art-text artwork" id="section-4.2-2.1">
 <pre>
 1996-12-19T16:39:57-08:00
 </pre>
@@ -1457,12 +1472,12 @@ This special case is only available for timezone tags.<a href="#section-4-3" cla
 <a href="#name-rfc-3339-date-time-with-tim" class="selfRef">RFC 3339 date-time with timezone offset</a>
           </figcaption></figure>
 </div>
-<p id="section-4.1-3"><a href="#rfc3339-datetime" class="xref">Figure 3</a> represents 39 minutes and 57 seconds after the 16th hour of
+<p id="section-4.2-3"><a href="#rfc3339-datetime" class="xref">Figure 3</a> represents 39 minutes and 57 seconds after the 16th hour of
 December 19th, 1996 with an offset of -08:00 from UTC.
-Note that this is the same instant in time as <code>1996-12-20T00:39:57Z</code>, expressed in UTC.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+Note that this is the same instant in time as <code>1996-12-20T00:39:57Z</code>, expressed in UTC.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
 <span id="name-adding-a-timezone-name"></span><div id="datetime-tzname">
 <figure id="figure-4">
-          <div class="alignLeft art-text artwork" id="section-4.1-4.1">
+          <div class="alignLeft art-text artwork" id="section-4.2-4.1">
 <pre>
 1996-12-19T16:39:57-08:00[America/Los_Angeles]
 </pre>
@@ -1471,13 +1486,13 @@ Note that this is the same instant in time as <code>1996-12-20T00:39:57Z</code>,
 <a href="#name-adding-a-timezone-name" class="selfRef">Adding a timezone name</a>
           </figcaption></figure>
 </div>
-<p id="section-4.1-5"><a href="#datetime-tzname" class="xref">Figure 4</a> represents the exact same instant as the previous example but
+<p id="section-4.2-5"><a href="#datetime-tzname" class="xref">Figure 4</a> represents the exact same instant as the previous example but
 additionally specifies the human time zone associated with it
 ("Pacific Time") for time-zone-aware implementations to take into
-account.<a href="#section-4.1-5" class="pilcrow">¶</a></p>
+account.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
 <span id="name-projecting-to-the-hebrew-ca"></span><div id="date-time-hebrew">
 <figure id="figure-5">
-          <div class="alignLeft art-text artwork" id="section-4.1-6.1">
+          <div class="alignLeft art-text artwork" id="section-4.2-6.1">
 <pre>
 1996-12-19T16:39:57-08:00[America/Los_Angeles][u-ca=hebrew]
 </pre>
@@ -1486,11 +1501,11 @@ account.<a href="#section-4.1-5" class="pilcrow">¶</a></p>
 <a href="#name-projecting-to-the-hebrew-ca" class="selfRef">Projecting to the Hebrew calendar</a>
           </figcaption></figure>
 </div>
-<p id="section-4.1-7"><a href="#date-time-hebrew" class="xref">Figure 5</a> represents the exact same instant, but it informs calendar-aware
-implementations that they should project it to the Hebrew calendar.<a href="#section-4.1-7" class="pilcrow">¶</a></p>
+<p id="section-4.2-7"><a href="#date-time-hebrew" class="xref">Figure 5</a> represents the exact same instant, but it informs calendar-aware
+implementations that they should project it to the Hebrew calendar.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
 <span id="name-adding-tags-in-private-use-"></span><div id="date-time-private">
 <figure id="figure-6">
-          <div class="alignLeft art-text artwork" id="section-4.1-8.1">
+          <div class="alignLeft art-text artwork" id="section-4.2-8.1">
 <pre>
 1996-12-19T16:39:57-08:00[x-foo=bar][x-baz=bat]
 </pre>
@@ -1499,9 +1514,9 @@ implementations that they should project it to the Hebrew calendar.<a href="#sec
 <a href="#name-adding-tags-in-private-use-" class="selfRef">Adding tags in private use namespaces</a>
           </figcaption></figure>
 </div>
-<p id="section-4.1-9"><a href="#date-time-private" class="xref">Figure 6</a>, based on <a href="#rfc3339-datetime" class="xref">Figure 3</a>, utilizes the private use namespace to declare two
+<p id="section-4.2-9"><a href="#date-time-private" class="xref">Figure 6</a>, based on <a href="#rfc3339-datetime" class="xref">Figure 3</a>, utilizes the private use namespace to declare two
 additional pieces of information in the suffix that can be interpreted
-by any compatible implementations and ignored otherwise.<a href="#section-4.1-9" class="pilcrow">¶</a></p>
+by any compatible implementations and ignored otherwise.<a href="#section-4.2-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1515,7 +1530,8 @@ by any compatible implementations and ignored otherwise.<a href="#section-4.1-9"
 Namespaces can be recognized by ending with a hyphen/minus.
 Actual keys do not.
 See <a href="#registered" class="xref">Section 3.3</a> for the detailed information (to be edited).<a href="#section-5-1" class="pilcrow">¶</a></p>
-<p id="section-5-2">The policy is "RFC required", "Specification Required", ???<span class="cref" id="policy">We need to define the policy for both namespaces and full keys.<span class="crefSource">--- cabo</span></span><a href="#section-5-2" class="pilcrow">¶</a></p>
+<p id="section-5-2">The policy is "RFC required", "Specification Required", ???<span class="cref" id="policy">We need to define the policy for both namespaces and full keys.<span class="crefSource">--- cabo</span></span>
+        <span>[<a href="#RFC8126" class="xref">RFC8126</a>]</span>.<a href="#section-5-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -1535,22 +1551,6 @@ See <a href="#registered" class="xref">Section 3.3</a> for the detailed informat
 <a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
-<dt id="BCP47">[BCP47]</dt>
-        <dd><div class="refInstance" id="RFC4647">
-            <span class="refAuthor">Phillips, A., Ed.</span> and <span class="refAuthor">M. Davis, Ed.</span>, <span class="refTitle">"Matching of Language Tags"</span>, <span class="seriesInfo">BCP 47</span>, <span class="seriesInfo">RFC 4647</span>, <time datetime="2006-09" class="refDate">September 2006</time>. </div>
-<div class="refInstance" id="RFC5646">
-            <span class="refAuthor">Phillips, A., Ed.</span> and <span class="refAuthor">M. Davis, Ed.</span>, <span class="refTitle">"Tags for Identifying Languages"</span>, <span class="seriesInfo">BCP 47</span>, <span class="seriesInfo">RFC 5646</span>, <time datetime="2009-09" class="refDate">September 2009</time>. </div>
-<span>&lt;<a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a>&gt;</span>
-</dd>
-<dd class="break"></dd>
-<dt id="RFC2026">[RFC2026]</dt>
-        <dd>
-<span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"The Internet Standards Process -- Revision 3"</span>, <span class="seriesInfo">BCP 9</span>, <span class="seriesInfo">RFC 2026</span>, <span class="seriesInfo">DOI 10.17487/RFC2026</span>, <time datetime="1996-10" class="refDate">October 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2026">https://www.rfc-editor.org/rfc/rfc2026</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC2028">[RFC2028]</dt>
-        <dd>
-<span class="refAuthor">Hovey, R.</span> and <span class="refAuthor">S. Bradner</span>, <span class="refTitle">"The Organizations Involved in the IETF Standards Process"</span>, <span class="seriesInfo">BCP 11</span>, <span class="seriesInfo">RFC 2028</span>, <span class="seriesInfo">DOI 10.17487/RFC2028</span>, <time datetime="1996-10" class="refDate">October 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2028">https://www.rfc-editor.org/rfc/rfc2028</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
