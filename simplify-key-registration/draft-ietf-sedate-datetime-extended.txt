@@ -177,9 +177,10 @@ Table of Contents
    The format should allow implementations to specify additional
    important information in addition to the bare timestamp.  This is
    done by defining _tags_, each with a _key_ and a _value_ separated by
-   an equals sign.  The key of a tag can be split by including a hyphen/
-   minus sign "-".  The value of a tag can be a hyphen/minus delimited
-   list of multiple values.
+   an equals sign.  The key of a tag can be split into two parts by
+   including a hyphen/minus sign "-"; the first part (including the "-")
+   can then be used as a namespace.  The value of a tag can be a hyphen/
+   minus delimited list of multiple values.
 
    Out of these tags, applications can build an informative _suffix_ at
    the end with as many tags as required.
