@@ -5,8 +5,8 @@
 Serialising Extended Data About Times and Events               U. Sharma
 Internet-Draft                                              Igalia, S.L.
 Intended status: Standards Track                              C. Bormann
-Expires: 4 June 2022                              Universität Bremen TZI
-                                                         1 December 2021
+Expires: 6 June 2022                              Universität Bremen TZI
+                                                         3 December 2021
 
 
  Date and Time on the Internet: Timestamps with additional information
@@ -18,9 +18,13 @@ Abstract
    RFC3339 for representing additional information including a time
    zone.
 
-Discussion Venues
+About This Document
 
    This note is to be removed before publishing as an RFC.
+
+   Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-
+   extended/.
 
    Discussion of this document takes place on the Serialising Extended
    Data About Times and Events (SEDATE) Working Group mailing list
@@ -46,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 June 2022.
+   This Internet-Draft will expire on 6 June 2022.
 
 Copyright Notice
 
@@ -65,18 +69,19 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-   2.  Definitions
-   3.  Extended Date/Time format
-     3.1.  Informative
-     3.2.  Namespaced
-     3.3.  Multi-character Namespaces
-     3.4.  Syntax Extensions to RFC 3339
-     3.5.  Examples
-   4.  IANA Considerations
-   5.  Security Considerations
-   6.  References
-     6.1.  Normative References
-     6.2.  Informative References
+     1.1.  Scope
+     1.2.  Definitions
+   2.  Extended Date/Time format
+     2.1.  Informative
+     2.2.  Namespaced
+     2.3.  Multi-character Namespaces
+     2.4.  Syntax Extensions to RFC 3339
+     2.5.  Examples
+   3.  IANA Considerations
+   4.  Security Considerations
+   5.  References
+     5.1.  Normative References
+     5.2.  Informative References
    Appendix A.  Acknowledgements
    Authors' Addresses
 
@@ -103,6 +108,8 @@ Table of Contents
    including but not limited to the calendar system it needs to be
    represented in.
 
+1.1.  Scope
+
    This document defines an extension syntax for timestamps as specified
    in [RFC3339] that has the following properties:
 
@@ -115,7 +122,44 @@ Table of Contents
    *  The format provides a generalized way to attach any additional
       information to the timestamp.
 
-2.  Definitions
+   This document does not address extensions to the format where the
+   semantic result no longer is a fixed timestamp that is referenced to
+   a (past or future) UTC time.  For instance, it does not address:
+
+   *  Future time given as a local time in some specified time zone,
+      where changes to the definition of that time zone (e.g., a
+      political decision to enact or rescind daylight savings time)
+      changes the actual time in UTC time.
+
+   *  Time given as a "floating time", i.e., a local time without
+      information as to which time zone this local time refers to.
+
+   *  The use of time scales different from UTC, such as TAI.
+
+   However, the additional information provided that augments a fixed
+   timestamp may be sufficient to detect an inconsistency between
+   intention and the actual information given in the timestamp, e.g.,
+   between the additional timezone information given and the timezone
+   offset recorded in the timestamp.  For instance, such an
+   inconsistency might arise because of:
+
+   *  Political decisions as discussed above, or
+
+   *  errors in the applications producing and consuming such a
+      timestamp.
+
+   While the information available is not generally sufficient to
+   resolve the inconsistency, it may be used to initiate some out of
+   band processing to obtain sufficient information for such a
+   resolution.
+
+   In order to address some of the requirements implied here, future
+   related specifications might define syntax and semantics of strings
+   similar to [RFC3339].  Note that the extension syntax defined in the
+   present document is designed in such a way that it can be useful for
+   such specifications as well.
+
+1.2.  Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -161,13 +205,13 @@ Table of Contents
    Section 3 of [ISO8601], and the appropriate ITU documents
    [ITU-R-TF.460-6].
 
-3.  Extended Date/Time format
+2.  Extended Date/Time format
 
    This section discusses desirable qualities of formats for the
    timestamp extension suffix and defines such a format that extends
    [RFC3339] for use in Internet protocols.
 
-3.1.  Informative
+2.1.  Informative
 
    The format should allow implementations to specify additional
    important information in addition to the bare timestamp.  This is
@@ -179,7 +223,7 @@ Table of Contents
    In case a key is repeated or conflicted, implementations MUST give
    precedence to whichever value is positioned first.
 
-3.2.  Namespaced
+2.2.  Namespaced
 
    Since tags can include all sorts of additional information, different
    standards bodies/organizations need a way to identify which part
@@ -204,10 +248,10 @@ Table of Contents
 
       -  A suffix-value is limited to 3*8alphanum.
 
-3.3.  Multi-character Namespaces
+2.3.  Multi-character Namespaces
 
    Multi-character namespaces can be registered specifically for use in
-   this format, see Section 4.  The registration policy requires the
+   this format, see Section 3.  The registration policy requires the
    development of an RFC, which SHALL define the name, purpose,
    processes, and procedures for maintaining the tags using the
    namespace registered.
@@ -318,7 +362,7 @@ Table of Contents
    solely with the IESG and is subject to the normal review and appeals
    process associated with the RFC process.
 
-3.4.  Syntax Extensions to RFC 3339
+2.4.  Syntax Extensions to RFC 3339
 
    The following rules extend the ABNF syntax defined in [RFC3339] in
    order to allow the inclusion of an optional suffix: the extended
@@ -346,7 +390,7 @@ Table of Contents
 
               Figure 2: ABNF grammar of extensions to RFC 3339
 
-3.5.  Examples
+2.5.  Examples
 
    Here are some examples of Internet extended date/time format.
 
@@ -385,19 +429,19 @@ Table of Contents
    be interpreted by any compatible implementations and ignored
    otherwise.
 
-4.  IANA Considerations
+3.  IANA Considerations
 
    Multi-character namespaces are assigned by IANA using the "IETF
    Review" policy defined by [RFC8126]; the IETF review process needs to
-   be based on the requirements laid out in Section 3.3.
+   be based on the requirements laid out in Section 2.3.
 
-5.  Security Considerations
+4.  Security Considerations
 
    TBD
 
-6.  References
+5.  References
 
-6.1.  Normative References
+5.1.  Normative References
 
    [BCP47]    Phillips, A., Ed. and M. Davis, Ed., "Matching of Language
               Tags", BCP 47, RFC 4647, September 2006.
@@ -439,7 +483,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-6.2.  Informative References
+5.2.  Informative References
 
    [CLDR]     "Unicode CLDR Project", <https://cldr.unicode.org>.
 

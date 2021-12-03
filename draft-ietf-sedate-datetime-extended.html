@@ -1018,7 +1018,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Sharma &amp; Bormann</td>
-<td class="center">Expires 4 June 2022</td>
+<td class="center">Expires 6 June 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1031,12 +1031,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-ietf-sedate-datetime-extended-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2021-12-01" class="published">1 December 2021</time>
+<time datetime="2021-12-03" class="published">3 December 2021</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-06-04">4 June 2022</time></dd>
+<dd class="expires"><time datetime="2022-06-06">6 June 2022</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1058,16 +1058,18 @@ RFC3339 for representing additional information including a time
 zone.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
-      <h2 id="name-discussion-venues">
-<a href="#name-discussion-venues" class="section-name selfRef">Discussion Venues</a>
+      <h2 id="name-about-this-document">
+<a href="#name-about-this-document" class="section-name selfRef">About This Document</a>
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended/">https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+<p id="section-note.1-3">
         Discussion of this document takes place on the
         Serialising Extended Data About Times and Events (SEDATE) Working Group mailing list (<span><a href="mailto:sedate@ietf.org">mailto:sedate@ietf.org</a></span>),
-        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/sedate/">https://mailarchive.ietf.org/arch/browse/sedate/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
-<p id="section-note.1-3">Source for this draft and an issue tracker can be found at
-        <span><a href="https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended">https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/sedate/">https://mailarchive.ietf.org/arch/browse/sedate/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+<p id="section-note.1-4">Source for this draft and an issue tracker can be found at
+        <span><a href="https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended">https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1088,7 +1090,7 @@ zone.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 4 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1119,52 +1121,57 @@ zone.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <nav class="toc"><ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="xref">1</a>.  <a href="#name-introduction" class="xref">Introduction</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.1">
+                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="xref">1.1</a>.  <a href="#name-scope" class="xref">Scope</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2">
+                <p id="section-toc.1-1.1.2.2.1" class="keepWithNext"><a href="#section-1.2" class="xref">1.2</a>.  <a href="#name-definitions" class="xref">Definitions</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="xref">2</a>.  <a href="#name-definitions" class="xref">Definitions</a></p>
+            <p id="section-toc.1-1.2.1"><a href="#section-2" class="xref">2</a>.  <a href="#name-extended-date-time-format" class="xref">Extended Date/Time format</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.1">
+                <p id="section-toc.1-1.2.2.1.1"><a href="#section-2.1" class="xref">2.1</a>.  <a href="#name-informative" class="xref">Informative</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.2">
+                <p id="section-toc.1-1.2.2.2.1"><a href="#section-2.2" class="xref">2.2</a>.  <a href="#name-namespaced" class="xref">Namespaced</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.3">
+                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="xref">2.3</a>.  <a href="#name-multi-character-namespaces" class="xref">Multi-character Namespaces</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.4">
+                <p id="section-toc.1-1.2.2.4.1"><a href="#section-2.4" class="xref">2.4</a>.  <a href="#name-syntax-extensions-to-rfc-33" class="xref">Syntax Extensions to RFC 3339</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.5">
+                <p id="section-toc.1-1.2.2.5.1"><a href="#section-2.5" class="xref">2.5</a>.  <a href="#name-examples" class="xref">Examples</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1"><a href="#section-3" class="xref">3</a>.  <a href="#name-extended-date-time-format" class="xref">Extended Date/Time format</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
-                <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-3.1" class="xref">3.1</a>.  <a href="#name-informative" class="xref">Informative</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
-                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="xref">3.2</a>.  <a href="#name-namespaced" class="xref">Namespaced</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.3">
-                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="xref">3.3</a>.  <a href="#name-multi-character-namespaces" class="xref">Multi-character Namespaces</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.4">
-                <p id="section-toc.1-1.3.2.4.1"><a href="#section-3.4" class="xref">3.4</a>.  <a href="#name-syntax-extensions-to-rfc-33" class="xref">Syntax Extensions to RFC 3339</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.5">
-                <p id="section-toc.1-1.3.2.5.1"><a href="#section-3.5" class="xref">3.5</a>.  <a href="#name-examples" class="xref">Examples</a></p>
-</li>
-            </ul>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="xref">3</a>.  <a href="#name-iana-considerations" class="xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-iana-considerations" class="xref">IANA Considerations</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-security-considerations" class="xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="xref">5</a>.  <a href="#name-security-considerations" class="xref">Security Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#section-6" class="xref">6</a>.  <a href="#name-references" class="xref">References</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="xref">5</a>.  <a href="#name-references" class="xref">References</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
-                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="xref">6.1</a>.  <a href="#name-normative-references" class="xref">Normative References</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="xref">5.1</a>.  <a href="#name-normative-references" class="xref">Normative References</a></p>
 </li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
-                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="xref">6.2</a>.  <a href="#name-informative-references" class="xref">Informative References</a></p>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="xref">5.2</a>.  <a href="#name-informative-references" class="xref">Informative References</a></p>
 </li>
             </ul>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="xref">Appendix A</a>.  <a href="#name-acknowledgements" class="xref">Acknowledgements</a></p>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
+            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="xref">Appendix A</a>.  <a href="#name-acknowledgements" class="xref">Acknowledgements</a></p>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="xref"></a><a href="#name-authors-addresses" class="xref">Authors' Addresses</a></p>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
+            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="xref"></a><a href="#name-authors-addresses" class="xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1193,35 +1200,77 @@ non-standard format, at least one of which is fairly well-adopted <span>[<a href
 Furthermore, applications might want to attach even more information to the
 timestamp, including but not limited to the calendar system it needs
 to be represented in.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">This document defines an extension syntax for timestamps as specified
-in <span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> that has the following properties:<a href="#section-1-4" class="pilcrow">¶</a></p>
+<div id="scope">
+<section id="section-1.1">
+        <h3 id="name-scope">
+<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-scope" class="section-name selfRef">Scope</a>
+        </h3>
+<p id="section-1.1-1">This document defines an extension syntax for timestamps as specified
+in <span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> that has the following properties:<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-1-5.1">The extension suffix is completely optional, making existing
-<span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> timestamps compatible with this format.<a href="#section-1-5.1" class="pilcrow">¶</a>
+<li class="normal" id="section-1.1-2.1">The extension suffix is completely optional, making existing
+<span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> timestamps compatible with this format.<a href="#section-1.1-2.1" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-1-5.2">The format is compatible with the pre-existing popular syntax for attaching
-time zone names to timestamps (<span>[<a href="#JAVAZDT" class="xref">JAVAZDT</a>]</span>).<a href="#section-1-5.2" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.2">The format is compatible with the pre-existing popular syntax for attaching
+time zone names to timestamps (<span>[<a href="#JAVAZDT" class="xref">JAVAZDT</a>]</span>).<a href="#section-1.1-2.2" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-1-5.3">The format provides a generalized way to attach any additional
-information to the timestamp.<a href="#section-1-5.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.3">The format provides a generalized way to attach any additional
+information to the timestamp.<a href="#section-1.1-2.3" class="pilcrow">¶</a>
 </li>
-      </ul>
+        </ul>
+<p id="section-1.1-3">This document does not address extensions to the format where the
+semantic result no longer is a fixed timestamp that is referenced to a
+(past or future) UTC time.
+For instance, it does not address:<a href="#section-1.1-3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.1-4.1">Future time given as a local time in some specified time zone, where
+changes to the definition of that time zone (e.g., a political
+decision to enact or rescind daylight savings time) changes the
+actual time in UTC time.<a href="#section-1.1-4.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-4.2">Time given as a "floating time", i.e., a local time without
+information as to which time zone this local time refers to.<a href="#section-1.1-4.2" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-4.3">The use of time scales different from UTC, such as TAI.<a href="#section-1.1-4.3" class="pilcrow">¶</a>
+</li>
+        </ul>
+<p id="section-1.1-5">However, the additional information provided that augments a fixed
+timestamp may be sufficient to detect an inconsistency between
+intention and the actual information given in the timestamp, e.g.,
+between the additional timezone information given and the timezone
+offset recorded in the timestamp.
+For instance, such an inconsistency might arise because of:<a href="#section-1.1-5" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.1-6.1">Political decisions as discussed above, or<a href="#section-1.1-6.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-6.2">errors in the applications producing and consuming such a timestamp.<a href="#section-1.1-6.2" class="pilcrow">¶</a>
+</li>
+        </ul>
+<p id="section-1.1-7">While the information available is not generally sufficient to resolve
+the inconsistency, it may be used to initiate some out of band
+processing to obtain sufficient information for such a resolution.<a href="#section-1.1-7" class="pilcrow">¶</a></p>
+<p id="section-1.1-8">In order to address some of the requirements implied here, future
+related specifications might define syntax and semantics of strings
+similar to <span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span>.
+Note that the extension syntax defined in the present document is
+designed in such a way that it can be useful for such specifications
+as well.<a href="#section-1.1-8" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="defintions">
-<section id="section-2">
-      <h2 id="name-definitions">
-<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-definitions" class="section-name selfRef">Definitions</a>
-      </h2>
-<p id="section-2-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
+<div id="definitions">
+<section id="section-1.2">
+        <h3 id="name-definitions">
+<a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-definitions" class="section-name selfRef">Definitions</a>
+        </h3>
+<p id="section-1.2-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
 "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
 described in BCP 14 <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="xref">RFC8174</a>]</span> when, and only when, they
-appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-2-2">
-        <dt id="section-2-2.1">
+appear in all capitals, as shown here.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-1.2-2">
+          <dt id="section-1.2-2.1">
 UTC:  </dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.2">
-          <p id="section-2-2.2.1">Coordinated Universal Time, as maintained since 1988 by the Bureau
+          <dd style="margin-left: 1.5em" id="section-1.2-2.2">
+            <p id="section-1.2-2.2.1">Coordinated Universal Time, as maintained since 1988 by the Bureau
 International des Poids et Mesures (BIPM) in conjunction with leap
 seconds as announced by the International Earth Rotation and
 Reference Frames Service <span>[<a href="#IERS" class="xref">IERS</a>]</span>.
@@ -1230,114 +1279,116 @@ International de l'Heure (BIH).
 Before 1972 UTC was not generally recognized and civil time was
 determined by individual jurisdictions using different techniques
 for attempting to follow Universal Time based on measuring the
-rotation of the earth.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
-<p id="section-2-2.2.2">UTC is often mistakenly referred to as GMT, an earlier timescale
-UTC was designed to be a useful successor for.<a href="#section-2-2.2.2" class="pilcrow">¶</a></p>
+rotation of the earth.<a href="#section-1.2-2.2.1" class="pilcrow">¶</a></p>
+<p id="section-1.2-2.2.2">UTC is often mistakenly referred to as GMT, an earlier timescale
+UTC was designed to be a useful successor for.<a href="#section-1.2-2.2.2" class="pilcrow">¶</a></p>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-2.3">
+          <dd class="break"></dd>
+<dt id="section-1.2-2.3">
 ABNF:  </dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.4">
-          <p id="section-2-2.4.1">Augmented Backus-Naur Form, a format used to represent permissible
+          <dd style="margin-left: 1.5em" id="section-1.2-2.4">
+            <p id="section-1.2-2.4.1">Augmented Backus-Naur Form, a format used to represent permissible
 strings in a protocol or language, as defined in <span>[<a href="#RFC5234" class="xref">RFC5234</a>]</span>.
-The rules defined in <span><a href="https://rfc-editor.org/rfc/rfc5234#appendix-B" class="relref">Appendix B</a> of [<a href="#RFC5234" class="xref">RFC5234</a>]</span> are imported implicitly.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
+The rules defined in <span><a href="https://rfc-editor.org/rfc/rfc5234#appendix-B" class="relref">Appendix B</a> of [<a href="#RFC5234" class="xref">RFC5234</a>]</span> are imported implicitly.<a href="#section-1.2-2.4.1" class="pilcrow">¶</a></p>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-2.5">
+          <dd class="break"></dd>
+<dt id="section-1.2-2.5">
 Internet Date/Time Format:  </dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.6">
-          <p id="section-2-2.6.1">The date/time format defined in section 3 of this document.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
+          <dd style="margin-left: 1.5em" id="section-1.2-2.6">
+            <p id="section-1.2-2.6.1">The date/time format defined in section 3 of this document.<a href="#section-1.2-2.6.1" class="pilcrow">¶</a></p>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-2.7">
+          <dd class="break"></dd>
+<dt id="section-1.2-2.7">
 Timestamp:  </dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.8">
-          <p id="section-2-2.8.1">This term is used in this document to refer to an unambiguous
-representation of some instant in time.<a href="#section-2-2.8.1" class="pilcrow">¶</a></p>
+          <dd style="margin-left: 1.5em" id="section-1.2-2.8">
+            <p id="section-1.2-2.8.1">This term is used in this document to refer to an unambiguous
+representation of some instant in time.<a href="#section-1.2-2.8.1" class="pilcrow">¶</a></p>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-2.9">
+          <dd class="break"></dd>
+<dt id="section-1.2-2.9">
 Z:  </dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.10">
-          <p id="section-2-2.10.1">A suffix which, when applied to a time, denotes a UTC offset of
+          <dd style="margin-left: 1.5em" id="section-1.2-2.10">
+            <p id="section-1.2-2.10.1">A suffix which, when applied to a time, denotes a UTC offset of
 00:00; often spoken "Zulu" from the ICAO phonetic alphabet
-representation of the letter "Z".<a href="#section-2-2.10.1" class="pilcrow">¶</a></p>
+representation of the letter "Z".<a href="#section-1.2-2.10.1" class="pilcrow">¶</a></p>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-2.11">
+          <dd class="break"></dd>
+<dt id="section-1.2-2.11">
 Time Zone:  </dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.12">
-          <p id="section-2-2.12.1">A time zone that is included in the Time Zone Database (often
-called <code>tz</code> or <code>zoneinfo</code>) maintained by IANA.<a href="#section-2-2.12.1" class="pilcrow">¶</a></p>
+          <dd style="margin-left: 1.5em" id="section-1.2-2.12">
+            <p id="section-1.2-2.12.1">A time zone that is included in the Time Zone Database (often
+called <code>tz</code> or <code>zoneinfo</code>) maintained by IANA.<a href="#section-1.2-2.12.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-1.2-2.13">
+CLDR:  </dt>
+          <dd style="margin-left: 1.5em" id="section-1.2-2.14">
+            <p id="section-1.2-2.14.1">Common locale data repository <span>[<a href="#CLDR" class="xref">CLDR</a>]</span>, a project of the Unicode
+Consortium to provide locale data to applications.<a href="#section-1.2-2.14.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.13">
-CLDR:  </dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.14">
-          <p id="section-2-2.14.1">Common locale data repository <span>[<a href="#CLDR" class="xref">CLDR</a>]</span>, a project of the Unicode
-Consortium to provide locale data to applications.<a href="#section-2-2.14.1" class="pilcrow">¶</a></p>
-</dd>
-      <dd class="break"></dd>
 </dl>
-<p id="section-2-3">For more information about time scales, see <span><a href="https://rfc-editor.org/rfc/rfc1305#appendix-E" class="relref">Appendix E</a> of [<a href="#RFC1305" class="xref">RFC1305</a>]</span>,
+<p id="section-1.2-3">For more information about time scales, see <span><a href="https://rfc-editor.org/rfc/rfc1305#appendix-E" class="relref">Appendix E</a> of [<a href="#RFC1305" class="xref">RFC1305</a>]</span>,
 Section 3 of <span>[<a href="#ISO8601" class="xref">ISO8601</a>]</span>, and the appropriate ITU documents
-<span>[<a href="#ITU-R-TF.460-6" class="xref">ITU-R-TF.460-6</a>]</span>.<a href="#section-2-3" class="pilcrow">¶</a></p>
+<span>[<a href="#ITU-R-TF.460-6" class="xref">ITU-R-TF.460-6</a>]</span>.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="date-time-format">
-<section id="section-3">
+<section id="section-2">
       <h2 id="name-extended-date-time-format">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-extended-date-time-format" class="section-name selfRef">Extended Date/Time format</a>
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-extended-date-time-format" class="section-name selfRef">Extended Date/Time format</a>
       </h2>
-<p id="section-3-1">This section discusses desirable qualities of formats for the
+<p id="section-2-1">This section discusses desirable qualities of formats for the
 timestamp extension suffix and defines such a format that extends
-<span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> for use in Internet protocols.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> for use in Internet protocols.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <div id="informative">
-<section id="section-3.1">
+<section id="section-2.1">
         <h3 id="name-informative">
-<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-informative" class="section-name selfRef">Informative</a>
+<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-informative" class="section-name selfRef">Informative</a>
         </h3>
-<p id="section-3.1-1">The format should allow implementations to specify additional
+<p id="section-2.1-1">The format should allow implementations to specify additional
 important information in addition to the bare timestamp.
 This is done by defining <em>tags</em>, each with a <em>key</em> and
 a <em>value</em> separated by an equals sign, and
 allowing implementations to include an informative
 <em>suffix</em> at the end with as many tags as required.
-The value of a tag can be a hyphen delimited list of multiple values.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
-<p id="section-3.1-2">In case a key is repeated or conflicted, implementations <span class="bcp14">MUST</span> give
-precedence to whichever value is positioned first.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+The value of a tag can be a hyphen delimited list of multiple values.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<p id="section-2.1-2">In case a key is repeated or conflicted, implementations <span class="bcp14">MUST</span> give
+precedence to whichever value is positioned first.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="namespaced">
-<section id="section-3.2">
+<section id="section-2.2">
         <h3 id="name-namespaced">
-<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-namespaced" class="section-name selfRef">Namespaced</a>
+<a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-namespaced" class="section-name selfRef">Namespaced</a>
         </h3>
-<p id="section-3.2-1">Since tags can include all sorts of additional information,
+<p id="section-2.2-1">Since tags can include all sorts of additional information,
 different standards bodies/organizations need a way to identify which
 part adheres to their standards.
 For this, all information needs to be namespaced.
 Each key is therefore divided into two hyphen-separated sections: the
 namespace and the key.
 For example, the calendar as defined by the Unicode consortium could
-be included as <code>u-ca=&lt;value&gt;</code>.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">All single-character namespaces are reserved for <span>[<a href="#BCP47" class="xref">BCP47</a>]</span> extensions
+be included as <code>u-ca=&lt;value&gt;</code>.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-2">All single-character namespaces are reserved for <span>[<a href="#BCP47" class="xref">BCP47</a>]</span> extensions
 recorded in the BCP47 extensions registry.
 
-For these namespaces:<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+For these namespaces:<a href="#section-2.2-2" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.2-3.1">Case differences are ignored.<a href="#section-3.2-3.1" class="pilcrow">¶</a>
+<li class="normal" id="section-2.2-3.1">Case differences are ignored.<a href="#section-2.2-3.1" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.2-3.2">The namespace is restricted to single alphanum, corresponding to
-extension singletons ('x' can be used for a private use extension).<a href="#section-3.2-3.2" class="pilcrow">¶</a>
+          <li class="normal" id="section-2.2-3.2">The namespace is restricted to single alphanum, corresponding to
+extension singletons ('x' can be used for a private use extension).<a href="#section-2.2-3.2" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.2-3.3">
-            <p id="section-3.2-3.3.1">In addition, for CLDR extensions:<a href="#section-3.2-3.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-2.2-3.3">
+            <p id="section-2.2-3.3.1">In addition, for CLDR extensions:<a href="#section-2.2-3.3.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.2-3.3.2.1">There must be a <code>namespace-key</code> and it is restricted to 2
-<code>alphanum</code> characters.<a href="#section-3.2-3.3.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-2.2-3.3.2.1">There must be a <code>namespace-key</code> and it is restricted to 2
+<code>alphanum</code> characters.<a href="#section-2.2-3.3.2.1" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="section-3.2-3.3.2.2">A <code>suffix-value</code> is limited to <code>3*8alphanum</code>.<a href="#section-3.2-3.3.2.2" class="pilcrow">¶</a>
+              <li class="normal" id="section-2.2-3.3.2.2">A <code>suffix-value</code> is limited to <code>3*8alphanum</code>.<a href="#section-2.2-3.3.2.2" class="pilcrow">¶</a>
 </li>
             </ul>
 </li>
@@ -1345,61 +1396,61 @@ extension singletons ('x' can be used for a private use extension).<a href="#sec
 </section>
 </div>
 <div id="multi-char">
-<section id="section-3.3">
+<section id="section-2.3">
         <h3 id="name-multi-character-namespaces">
-<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-multi-character-namespaces" class="section-name selfRef">Multi-character Namespaces</a>
+<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-multi-character-namespaces" class="section-name selfRef">Multi-character Namespaces</a>
         </h3>
-<p id="section-3.3-1">Multi-character namespaces can be registered specifically for use in
-this format, see <a href="#iana-cons" class="xref">Section 4</a>.
+<p id="section-2.3-1">Multi-character namespaces can be registered specifically for use in
+this format, see <a href="#iana-cons" class="xref">Section 3</a>.
 The registration policy requires the development of an RFC,
 which <span class="bcp14">SHALL</span> define the
 name, purpose, processes, and procedures for maintaining the tags
-using the namespace registered.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
-<p id="section-3.3-2">(This subsection uses BCP 14 language to describe the requirements on
+using the namespace registered.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
+<p id="section-2.3-2">(This subsection uses BCP 14 language to describe the requirements on
 the information interchanged indirectly by providing requirements on
-the RFC registering a namespace and the principles of its evolution.)<a href="#section-3.3-2" class="pilcrow">¶</a></p>
-<p id="section-3.3-3">The maintaining or registering authority, including name, contact
+the RFC registering a namespace and the principles of its evolution.)<a href="#section-2.3-2" class="pilcrow">¶</a></p>
+<p id="section-2.3-3">The maintaining or registering authority, including name, contact
 email, discussion list email, and URL location of the registry, <span class="bcp14">MUST</span>
 be indicated clearly in the RFC.
 
-The RFC <span class="bcp14">MUST</span> specify each of the following (directly or included by reference):<a href="#section-3.3-3" class="pilcrow">¶</a></p>
+The RFC <span class="bcp14">MUST</span> specify each of the following (directly or included by reference):<a href="#section-2.3-3" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.3-4.1">The specification <span class="bcp14">MUST</span> reference the specific version or revision of
+<li class="normal" id="section-2.3-4.1">The specification <span class="bcp14">MUST</span> reference the specific version or revision of
 this document that governs its creation and <span class="bcp14">MUST</span> reference this
-section of this document.<a href="#section-3.3-4.1" class="pilcrow">¶</a>
+section of this document.<a href="#section-2.3-4.1" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.2">The specification and all keys defined by the specification <span class="bcp14">MUST</span>
+          <li class="normal" id="section-2.3-4.2">The specification and all keys defined by the specification <span class="bcp14">MUST</span>
 follow the ABNF and other rules for the formation of keys as defined
 in this document.
 
 In particular, it <span class="bcp14">MUST</span> specify that case is not significant and that
-keys <span class="bcp14">MUST NOT</span> exceed eight characters in length.<a href="#section-3.3-4.2" class="pilcrow">¶</a>
+keys <span class="bcp14">MUST NOT</span> exceed eight characters in length.<a href="#section-2.3-4.2" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.3">The specification <span class="bcp14">MUST</span> specify a canonical representation.<a href="#section-3.3-4.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-2.3-4.3">The specification <span class="bcp14">MUST</span> specify a canonical representation.<a href="#section-2.3-4.3" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.4">The specification of valid keys <span class="bcp14">MUST</span> be available over the Internet
-and at no cost.<a href="#section-3.3-4.4" class="pilcrow">¶</a>
+          <li class="normal" id="section-2.3-4.4">The specification of valid keys <span class="bcp14">MUST</span> be available over the Internet
+and at no cost.<a href="#section-2.3-4.4" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.5">The specification <span class="bcp14">MUST</span> be in the public domain or available via a
+          <li class="normal" id="section-2.3-4.5">The specification <span class="bcp14">MUST</span> be in the public domain or available via a
 royalty-free license acceptable to the IETF and specified in the
-RFC.<a href="#section-3.3-4.5" class="pilcrow">¶</a>
+RFC.<a href="#section-2.3-4.5" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.6">The specification <span class="bcp14">MUST</span> be versioned, and each version of the
-specification <span class="bcp14">MUST</span> be numbered, dated, and stable.<a href="#section-3.3-4.6" class="pilcrow">¶</a>
+          <li class="normal" id="section-2.3-4.6">The specification <span class="bcp14">MUST</span> be versioned, and each version of the
+specification <span class="bcp14">MUST</span> be numbered, dated, and stable.<a href="#section-2.3-4.6" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.7">The specification <span class="bcp14">MUST</span> be stable.
+          <li class="normal" id="section-2.3-4.7">The specification <span class="bcp14">MUST</span> be stable.
 That is, namespace keys, once defined by a specification, <span class="bcp14">MUST NOT</span>
-be retracted or change in meaning in any substantial way.<a href="#section-3.3-4.7" class="pilcrow">¶</a>
+be retracted or change in meaning in any substantial way.<a href="#section-2.3-4.7" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.8">The specification <span class="bcp14">MUST</span> include, in a separate section, the
+          <li class="normal" id="section-2.3-4.8">The specification <span class="bcp14">MUST</span> include, in a separate section, the
 registration form reproduced in this section (below) to be used in
-registering the namespace upon publication as an RFC.<a href="#section-3.3-4.8" class="pilcrow">¶</a>
+registering the namespace upon publication as an RFC.<a href="#section-2.3-4.8" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-3.3-4.9">IANA <span class="bcp14">MUST</span> be informed of changes to the contact information and URL
-for the specification.<a href="#section-3.3-4.9" class="pilcrow">¶</a>
+          <li class="normal" id="section-2.3-4.9">IANA <span class="bcp14">MUST</span> be informed of changes to the contact information and URL
+for the specification.<a href="#section-2.3-4.9" class="pilcrow">¶</a>
 </li>
         </ul>
-<p id="section-3.3-5">IANA will maintain a registry of allocated multi-character namespaces.
+<p id="section-2.3-5">IANA will maintain a registry of allocated multi-character namespaces.
 This registry <span class="bcp14">MUST</span> use the record-jar format described by the ABNF in
 <span>[<a href="#BCP47" class="xref">BCP47</a>]</span>.
 
@@ -1413,15 +1464,15 @@ of the record by sending an updated full copy of the record to
 &lt;<span><a href="mailto:iana@iana.org">mailto:iana@iana.org</a></span>&gt; with the subject line "TIMESTAMP FORMAT
 NAMESPACE UPDATE" whenever content changes.
 Only the 'Comments', 'Contact_Email', 'Mailing_List', and 'URL' fields
-<span class="bcp14">MAY</span> be modified in these updates.<a href="#section-3.3-5" class="pilcrow">¶</a></p>
-<p id="section-3.3-6">Failure to maintain this record, maintain the corresponding registry,
+<span class="bcp14">MAY</span> be modified in these updates.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
+<p id="section-2.3-6">Failure to maintain this record, maintain the corresponding registry,
 or meet other conditions imposed by this section of this document <span class="bcp14">MAY</span>
 be appealed to the IESG <span>[<a href="#RFC2028" class="xref">RFC2028</a>]</span> under the same rules as other IETF
 decisions (see <span>[<a href="#RFC2026" class="xref">RFC2026</a>]</span>) and <span class="bcp14">MAY</span> result in the authority to maintain
-the extension being withdrawn or reassigned by the IESG.<a href="#section-3.3-6" class="pilcrow">¶</a></p>
+the extension being withdrawn or reassigned by the IESG.<a href="#section-2.3-6" class="pilcrow">¶</a></p>
 <span id="name-registration-record-for-a-m"></span><div id="record">
 <figure id="figure-1">
-          <div class="alignLeft art-text artwork" id="section-3.3-7.1">
+          <div class="alignLeft art-text artwork" id="section-2.3-7.1">
 <pre>
 %%
 Identifier:
@@ -1440,43 +1491,43 @@ URL:
 <a href="#name-registration-record-for-a-m" class="selfRef">Registration record for a multi-character namespace</a>
           </figcaption></figure>
 </div>
-<p id="section-3.3-8">'Identifier' contains the multi-character sequence assigned to the
+<p id="section-2.3-8">'Identifier' contains the multi-character sequence assigned to the
 namespace.
 The Internet-Draft submitted to define the namespace <span class="bcp14">SHOULD</span> specify
 which sequence to use, although the IESG <span class="bcp14">MAY</span> change the assignment
-when approving the RFC.<a href="#section-3.3-8" class="pilcrow">¶</a></p>
-<p id="section-3.3-9">'Description' contains the name and description of the namespace.<a href="#section-3.3-9" class="pilcrow">¶</a></p>
-<p id="section-3.3-10">'Comments' is an <span class="bcp14">OPTIONAL</span> field and <span class="bcp14">MAY</span> contain a broader description
-of the namespace.<a href="#section-3.3-10" class="pilcrow">¶</a></p>
-<p id="section-3.3-11">'Added' contains the date the namespace's RFC was published in the
+when approving the RFC.<a href="#section-2.3-8" class="pilcrow">¶</a></p>
+<p id="section-2.3-9">'Description' contains the name and description of the namespace.<a href="#section-2.3-9" class="pilcrow">¶</a></p>
+<p id="section-2.3-10">'Comments' is an <span class="bcp14">OPTIONAL</span> field and <span class="bcp14">MAY</span> contain a broader description
+of the namespace.<a href="#section-2.3-10" class="pilcrow">¶</a></p>
+<p id="section-2.3-11">'Added' contains the date the namespace's RFC was published in the
 "date-full" format specified in <a href="#grammar" class="xref">Figure 2</a>.
 For example: 2004-06-28 represents June 28, 2004, in the Gregorian
-calendar.<a href="#section-3.3-11" class="pilcrow">¶</a></p>
-<p id="section-3.3-12">'RFC' contains the RFC number assigned to the namespace.<a href="#section-3.3-12" class="pilcrow">¶</a></p>
-<p id="section-3.3-13">'Authority' contains the name of the maintaining authority for the
-namespace.<a href="#section-3.3-13" class="pilcrow">¶</a></p>
-<p id="section-3.3-14">'Contact_Email' contains the email address used to contact the
-maintaining authority.<a href="#section-3.3-14" class="pilcrow">¶</a></p>
-<p id="section-3.3-15">'Mailing_List' contains the URL or subscription email address of the
-mailing list used by the maintaining authority.<a href="#section-3.3-15" class="pilcrow">¶</a></p>
-<p id="section-3.3-16">'URL' contains the URL of the registry for this namespace.<a href="#section-3.3-16" class="pilcrow">¶</a></p>
-<p id="section-3.3-17">The determination of whether an Internet-Draft meets the above
+calendar.<a href="#section-2.3-11" class="pilcrow">¶</a></p>
+<p id="section-2.3-12">'RFC' contains the RFC number assigned to the namespace.<a href="#section-2.3-12" class="pilcrow">¶</a></p>
+<p id="section-2.3-13">'Authority' contains the name of the maintaining authority for the
+namespace.<a href="#section-2.3-13" class="pilcrow">¶</a></p>
+<p id="section-2.3-14">'Contact_Email' contains the email address used to contact the
+maintaining authority.<a href="#section-2.3-14" class="pilcrow">¶</a></p>
+<p id="section-2.3-15">'Mailing_List' contains the URL or subscription email address of the
+mailing list used by the maintaining authority.<a href="#section-2.3-15" class="pilcrow">¶</a></p>
+<p id="section-2.3-16">'URL' contains the URL of the registry for this namespace.<a href="#section-2.3-16" class="pilcrow">¶</a></p>
+<p id="section-2.3-17">The determination of whether an Internet-Draft meets the above
 conditions and the decision to grant or withhold such authority rests
 solely with the IESG and is subject to the normal review and appeals
-process associated with the RFC process.<a href="#section-3.3-17" class="pilcrow">¶</a></p>
+process associated with the RFC process.<a href="#section-2.3-17" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="syntax-extensions-to-rfc-3339">
-<section id="section-3.4">
+<section id="section-2.4">
         <h3 id="name-syntax-extensions-to-rfc-33">
-<a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-syntax-extensions-to-rfc-33" class="section-name selfRef">Syntax Extensions to RFC 3339</a>
+<a href="#section-2.4" class="section-number selfRef">2.4. </a><a href="#name-syntax-extensions-to-rfc-33" class="section-name selfRef">Syntax Extensions to RFC 3339</a>
         </h3>
-<p id="section-3.4-1">The following rules extend the ABNF syntax defined in <span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> in
+<p id="section-2.4-1">The following rules extend the ABNF syntax defined in <span>[<a href="#RFC3339" class="xref">RFC3339</a>]</span> in
 order to allow the inclusion of an optional suffix: the extended
-date/time format is described by the rule <code>date-time-ext</code>.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+date/time format is described by the rule <code>date-time-ext</code>.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
 <span id="name-abnf-grammar-of-extensions-"></span><div id="grammar">
 <figure id="figure-2">
-          <div class="alignLeft art-text artwork" id="section-3.4-2.1">
+          <div class="alignLeft art-text artwork" id="section-2.4-2.1">
 <pre>
 time-zone-initial = ALPHA / "." / "_"
 time-zone-char    = time-zone-initial / DIGIT / "-" / "+"
@@ -1506,14 +1557,14 @@ alphanum          = ALPHA / DIGIT
 </section>
 </div>
 <div id="date-time-examples">
-<section id="section-3.5">
+<section id="section-2.5">
         <h3 id="name-examples">
-<a href="#section-3.5" class="section-number selfRef">3.5. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
+<a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
         </h3>
-<p id="section-3.5-1">Here are some examples of Internet extended date/time format.<a href="#section-3.5-1" class="pilcrow">¶</a></p>
+<p id="section-2.5-1">Here are some examples of Internet extended date/time format.<a href="#section-2.5-1" class="pilcrow">¶</a></p>
 <span id="name-rfc-3339-date-time-with-tim"></span><div id="rfc3339-datetime">
 <figure id="figure-3">
-          <div class="alignLeft art-text artwork" id="section-3.5-2.1">
+          <div class="alignLeft art-text artwork" id="section-2.5-2.1">
 <pre>
 1996-12-19T16:39:57-08:00
 </pre>
@@ -1522,12 +1573,12 @@ alphanum          = ALPHA / DIGIT
 <a href="#name-rfc-3339-date-time-with-tim" class="selfRef">RFC 3339 date-time with timezone offset</a>
           </figcaption></figure>
 </div>
-<p id="section-3.5-3"><a href="#rfc3339-datetime" class="xref">Figure 3</a> represents 39 minutes and 57 seconds after the 16th hour of
+<p id="section-2.5-3"><a href="#rfc3339-datetime" class="xref">Figure 3</a> represents 39 minutes and 57 seconds after the 16th hour of
 December 19th, 1996 with an offset of -08:00 from UTC.
-Note that this is the same instant in time as <code>1996-12-20T00:39:57Z</code>, expressed in UTC.<a href="#section-3.5-3" class="pilcrow">¶</a></p>
+Note that this is the same instant in time as <code>1996-12-20T00:39:57Z</code>, expressed in UTC.<a href="#section-2.5-3" class="pilcrow">¶</a></p>
 <span id="name-adding-a-timezone-name"></span><div id="datetime-tzname">
 <figure id="figure-4">
-          <div class="alignLeft art-text artwork" id="section-3.5-4.1">
+          <div class="alignLeft art-text artwork" id="section-2.5-4.1">
 <pre>
 1996-12-19T16:39:57-08:00[America/Los_Angeles]
 </pre>
@@ -1536,13 +1587,13 @@ Note that this is the same instant in time as <code>1996-12-20T00:39:57Z</code>,
 <a href="#name-adding-a-timezone-name" class="selfRef">Adding a timezone name</a>
           </figcaption></figure>
 </div>
-<p id="section-3.5-5"><a href="#datetime-tzname" class="xref">Figure 4</a> represents the exact same instant as the previous example but
+<p id="section-2.5-5"><a href="#datetime-tzname" class="xref">Figure 4</a> represents the exact same instant as the previous example but
 additionally specifies the human time zone associated with it
 ("Pacific Time") for time-zone-aware implementations to take into
-account.<a href="#section-3.5-5" class="pilcrow">¶</a></p>
+account.<a href="#section-2.5-5" class="pilcrow">¶</a></p>
 <span id="name-projecting-to-the-hebrew-ca"></span><div id="date-time-hebrew">
 <figure id="figure-5">
-          <div class="alignLeft art-text artwork" id="section-3.5-6.1">
+          <div class="alignLeft art-text artwork" id="section-2.5-6.1">
 <pre>
 1996-12-19T16:39:57-08:00[America/Los_Angeles][u-ca=hebrew]
 </pre>
@@ -1551,11 +1602,11 @@ account.<a href="#section-3.5-5" class="pilcrow">¶</a></p>
 <a href="#name-projecting-to-the-hebrew-ca" class="selfRef">Projecting to the Hebrew calendar</a>
           </figcaption></figure>
 </div>
-<p id="section-3.5-7"><a href="#date-time-hebrew" class="xref">Figure 5</a> represents the exact same instant, but it informs calendar-aware
-implementations that they should project it to the Hebrew calendar.<a href="#section-3.5-7" class="pilcrow">¶</a></p>
+<p id="section-2.5-7"><a href="#date-time-hebrew" class="xref">Figure 5</a> represents the exact same instant, but it informs calendar-aware
+implementations that they should project it to the Hebrew calendar.<a href="#section-2.5-7" class="pilcrow">¶</a></p>
 <span id="name-adding-tags-in-private-use-"></span><div id="date-time-private">
 <figure id="figure-6">
-          <div class="alignLeft art-text artwork" id="section-3.5-8.1">
+          <div class="alignLeft art-text artwork" id="section-2.5-8.1">
 <pre>
 1996-12-19T16:39:57-08:00[x-foo=bar][x-baz=bat]
 </pre>
@@ -1564,38 +1615,38 @@ implementations that they should project it to the Hebrew calendar.<a href="#sec
 <a href="#name-adding-tags-in-private-use-" class="selfRef">Adding tags in private use namespaces</a>
           </figcaption></figure>
 </div>
-<p id="section-3.5-9"><a href="#date-time-private" class="xref">Figure 6</a>, based on <a href="#rfc3339-datetime" class="xref">Figure 3</a>, utilizes the private use namespace to declare two
+<p id="section-2.5-9"><a href="#date-time-private" class="xref">Figure 6</a>, based on <a href="#rfc3339-datetime" class="xref">Figure 3</a>, utilizes the private use namespace to declare two
 additional pieces of information in the suffix that can be interpreted
-by any compatible implementations and ignored otherwise.<a href="#section-3.5-9" class="pilcrow">¶</a></p>
+by any compatible implementations and ignored otherwise.<a href="#section-2.5-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
 </div>
 <div id="iana-cons">
-<section id="section-4">
+<section id="section-3">
       <h2 id="name-iana-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-4-1">Multi-character namespaces are assigned by IANA using the "IETF
+<p id="section-3-1">Multi-character namespaces are assigned by IANA using the "IETF
 Review" policy defined by <span>[<a href="#RFC8126" class="xref">RFC8126</a>]</span>; the IETF review process needs to
-be based on the requirements laid out in <a href="#multi-char" class="xref">Section 3.3</a>.<a href="#section-4-1" class="pilcrow">¶</a></p>
+be based on the requirements laid out in <a href="#multi-char" class="xref">Section 2.3</a>.<a href="#section-3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
-<section id="section-5">
+<section id="section-4">
       <h2 id="name-security-considerations">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-5-1">TBD<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">TBD<a href="#section-4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<section id="section-6">
+<section id="section-5">
       <h2 id="name-references">
-<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-references" class="section-name selfRef">References</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
-<section id="section-6.1">
+<section id="section-5.1">
         <h3 id="name-normative-references">
-<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
 <dt id="BCP47">[BCP47]</dt>
@@ -1636,9 +1687,9 @@ be based on the requirements laid out in <a href="#multi-char" class="xref">Sect
 <dd class="break"></dd>
 </dl>
 </section>
-<section id="section-6.2">
+<section id="section-5.2">
         <h3 id="name-informative-references">
-<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
 <dt id="CLDR">[CLDR]</dt>
