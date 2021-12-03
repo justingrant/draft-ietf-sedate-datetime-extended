@@ -74,14 +74,15 @@ Table of Contents
    2.  Extended Date/Time format
      2.1.  Informative
      2.2.  Namespaced
-     2.3.  Multi-character Namespaces
-     2.4.  Syntax Extensions to RFC 3339
-     2.5.  Examples
-   3.  IANA Considerations
-   4.  Security Considerations
-   5.  References
-     5.1.  Normative References
-     5.2.  Informative References
+     2.3.  Registered
+   3.  Syntax Extensions to RFC 3339
+     3.1.  ABNF
+     3.2.  Examples
+   4.  IANA Considerations
+   5.  Security Considerations
+   6.  References
+     6.1.  Normative References
+     6.2.  Informative References
    Appendix A.  Acknowledgements
    Authors' Addresses
 
@@ -216,105 +217,64 @@ Table of Contents
    The format should allow implementations to specify additional
    important information in addition to the bare timestamp.  This is
    done by defining _tags_, each with a _key_ and a _value_ separated by
-   an equals sign, and allowing implementations to include an
-   informative _suffix_ at the end with as many tags as required.  The
-   value of a tag can be a hyphen delimited list of multiple values.
+   an equals sign.  The key of a tag can be split into two parts by
+   including a hyphen/minus sign "-"; the first part (including the "-")
+   can then be used as a namespace.  The value of a tag can be a hyphen/
+   minus delimited list of multiple values.
 
-   In case a key is repeated or conflicted, implementations MUST give
-   precedence to whichever value is positioned first.
+   Out of these tags, applications can build an informative _suffix_ at
+   the end with as many tags as required.
+
+   Keys are case-sensitive.  Values are case-sensitive unless otherwise
+   specified.
+
+   In case a suffix repeats a key or otherwise contains conflicting
+   tags, implementations MUST give precedence to whichever value is
+   positioned first.
+   // I'd rather place a MUST NOT for this case, first.  This definitely
+   // needs to be expanded into some general text about error handling.
+   //
+   // -- --- cabo
 
 2.2.  Namespaced
 
-   Since tags can include all sorts of additional information, different
-   standards bodies/organizations need a way to identify which part
-   adheres to their standards.  For this, all information needs to be
-   namespaced.  Each key is therefore divided into two hyphen-separated
-   sections: the namespace and the key.  For example, the calendar as
-   defined by the Unicode consortium could be included as u-ca=<value>.
+   Suffix keys identify a _namespace_. By including a hyphen/minus sign
+   "-", the namespace can be separated from the rest of the key; if no
+   hyphen/minus sign is included, the whole key is the namespace.
 
-   All single-character namespaces are reserved for [BCP47] extensions
-   recorded in the BCP47 extensions registry.  For these namespaces:
+   For example, if "u-" is a namespace for the Unicode consortium, a
+   calendar as defined by that consortium could be included as
+   u-ca=<value>.
 
-   *  Case differences are ignored.
+   An IANA registry for namespaces can be used to allocate namespaces
+   for specific applications, as defined in Section 4.  Two namespaces
+   are allocated by the present document:
 
-   *  The namespace is restricted to single alphanum, corresponding to
-      extension singletons ('x' can be used for a private use
-      extension).
+   *  "u-" for keys defined by the Unicode consortium.
+
+   *  "x-" for keys used within experiments.  Such keys are not for
+      general interchange and MUST be rejected by a recipient unless
+      that is specifically enabled for an experiment.  See [RFC6648] for
+      additional considerations about "x-" namespaces.
 
    *  In addition, for CLDR extensions:
+      // I don't know how this would be used, so I can't edit this text.
+      //
+      // -- --- cabo
 
       -  There must be a namespace-key and it is restricted to 2
          alphanum characters.
 
       -  A suffix-value is limited to 3*8alphanum.
 
-2.3.  Multi-character Namespaces
+   Additional namespaces can be registered under an Expert review
+   policy, providing a description for the intended use.  This may be a
+   general concept, or a specific organization that is intended to
+   register keys within this namespace.
 
-   Multi-character namespaces can be registered specifically for use in
-   this format, see Section 3.  The registration policy requires the
-   development of an RFC, which SHALL define the name, purpose,
-   processes, and procedures for maintaining the tags using the
-   namespace registered.
+2.3.  Registered
 
-   (This subsection uses BCP 14 language to describe the requirements on
-   the information interchanged indirectly by providing requirements on
-   the RFC registering a namespace and the principles of its evolution.)
-
-   The maintaining or registering authority, including name, contact
-   email, discussion list email, and URL location of the registry, MUST
-   be indicated clearly in the RFC.  The RFC MUST specify each of the
-   following (directly or included by reference):
-
-   *  The specification MUST reference the specific version or revision
-      of this document that governs its creation and MUST reference this
-      section of this document.
-
-   *  The specification and all keys defined by the specification MUST
-      follow the ABNF and other rules for the formation of keys as
-      defined in this document.  In particular, it MUST specify that
-      case is not significant and that keys MUST NOT exceed eight
-      characters in length.
-
-   *  The specification MUST specify a canonical representation.
-
-   *  The specification of valid keys MUST be available over the
-      Internet and at no cost.
-
-   *  The specification MUST be in the public domain or available via a
-      royalty-free license acceptable to the IETF and specified in the
-      RFC.
-
-   *  The specification MUST be versioned, and each version of the
-      specification MUST be numbered, dated, and stable.
-
-   *  The specification MUST be stable.  That is, namespace keys, once
-      defined by a specification, MUST NOT be retracted or change in
-      meaning in any substantial way.
-
-   *  The specification MUST include, in a separate section, the
-      registration form reproduced in this section (below) to be used in
-      registering the namespace upon publication as an RFC.
-
-   *  IANA MUST be informed of changes to the contact information and
-      URL for the specification.
-
-   IANA will maintain a registry of allocated multi-character
-   namespaces.  This registry MUST use the record-jar format described
-   by the ABNF in [BCP47].  Upon publication of a namespace as an RFC,
-   the maintaining authority defined in the RFC MUST forward this
-   registration form to <mailto:iesg@ietf.org>, who MUST forward the
-   request to <mailto:iana@iana.org>.  The maintaining authority of the
-   namespace MUST maintain the accuracy of the record by sending an
-   updated full copy of the record to <mailto:iana@iana.org> with the
-   subject line "TIMESTAMP FORMAT NAMESPACE UPDATE" whenever content
-   changes.  Only the 'Comments', 'Contact_Email', 'Mailing_List', and
-   'URL' fields MAY be modified in these updates.
-
-   Failure to maintain this record, maintain the corresponding registry,
-   or meet other conditions imposed by this section of this document MAY
-   be appealed to the IESG [RFC2028] under the same rules as other IETF
-   decisions (see [RFC2026]) and MAY result in the authority to maintain
-   the extension being withdrawn or reassigned by the IESG.
+   Actual keys are registered by supplying the information in Figure 1:
 
    %%
    Identifier:
@@ -328,19 +288,16 @@ Table of Contents
    URL:
    %%
 
-       Figure 1: Registration record for a multi-character namespace
+                Figure 1: Registration record for a tag key
 
-   'Identifier' contains the multi-character sequence assigned to the
-   namespace.  The Internet-Draft submitted to define the namespace
-   SHOULD specify which sequence to use, although the IESG MAY change
-   the assignment when approving the RFC.
+   'Identifier' contains the key name.
 
    'Description' contains the name and description of the namespace.
 
    'Comments' is an OPTIONAL field and MAY contain a broader description
    of the namespace.
 
-   'Added' contains the date the namespace's RFC was published in the
+   'Added' contains the date the key's definition was published in the
    "date-full" format specified in Figure 2.  For example: 2004-06-28
    represents June 28, 2004, in the Gregorian calendar.
 
@@ -357,16 +314,16 @@ Table of Contents
 
    'URL' contains the URL of the registry for this namespace.
 
-   The determination of whether an Internet-Draft meets the above
-   conditions and the decision to grant or withhold such authority rests
-   solely with the IESG and is subject to the normal review and appeals
-   process associated with the RFC process.
+3.  Syntax Extensions to RFC 3339
 
-2.4.  Syntax Extensions to RFC 3339
+3.1.  ABNF
 
    The following rules extend the ABNF syntax defined in [RFC3339] in
-   order to allow the inclusion of an optional suffix: the extended
-   date/time format is described by the rule date-time-ext.
+   order to allow the inclusion of an optional suffix.
+
+   The extended date/time format is described by the rule date-time-ext.
+   date-time is imported from Section 5.6 of [RFC3339], ALPHA and DIGIT
+   from Appendix B.1 of [RFC5234].
 
    time-zone-initial = ALPHA / "." / "_"
    time-zone-char    = time-zone-initial / DIGIT / "-" / "+"
@@ -390,7 +347,11 @@ Table of Contents
 
               Figure 2: ABNF grammar of extensions to RFC 3339
 
-2.5.  Examples
+   Note that a time-zone is syntactically similar to a suffix-tag, but
+   does not use a suffix-key and an equals sign.  This special case is
+   only available for timezone tags.
+
+3.2.  Examples
 
    Here are some examples of Internet extended date/time format.
 
@@ -429,36 +390,25 @@ Table of Contents
    be interpreted by any compatible implementations and ignored
    otherwise.
 
-3.  IANA Considerations
+4.  IANA Considerations
 
-   Multi-character namespaces are assigned by IANA using the "IETF
-   Review" policy defined by [RFC8126]; the IETF review process needs to
-   be based on the requirements laid out in Section 2.3.
+   Define a registry that can contain both namespaces and keys.
+   Namespaces can be recognized by ending with a hyphen/minus.  Actual
+   keys do not.  See Section 2.3 for the detailed information (to be
+   edited).
 
-4.  Security Considerations
+   The policy is "RFC required", "Specification Required", ???
+   // We need to define the policy for both namespaces and full keys.
+   //
+   // -- --- cabo[RFC8126].
+
+5.  Security Considerations
 
    TBD
 
-5.  References
+6.  References
 
-5.1.  Normative References
-
-   [BCP47]    Phillips, A., Ed. and M. Davis, Ed., "Matching of Language
-              Tags", BCP 47, RFC 4647, September 2006.
-
-              Phillips, A., Ed. and M. Davis, Ed., "Tags for Identifying
-              Languages", BCP 47, RFC 5646, September 2009.
-
-              <https://www.rfc-editor.org/info/bcp47>
-
-   [RFC2026]  Bradner, S., "The Internet Standards Process -- Revision
-              3", BCP 9, RFC 2026, DOI 10.17487/RFC2026, October 1996,
-              <https://www.rfc-editor.org/rfc/rfc2026>.
-
-   [RFC2028]  Hovey, R. and S. Bradner, "The Organizations Involved in
-              the IETF Standards Process", BCP 11, RFC 2028,
-              DOI 10.17487/RFC2028, October 1996,
-              <https://www.rfc-editor.org/rfc/rfc2028>.
+6.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -483,7 +433,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-5.2.  Informative References
+6.2.  Informative References
 
    [CLDR]     "Unicode CLDR Project", <https://cldr.unicode.org>.
 
@@ -510,6 +460,12 @@ Table of Contents
               Specification, Implementation and Analysis", RFC 1305,
               DOI 10.17487/RFC1305, March 1992,
               <https://www.rfc-editor.org/rfc/rfc1305>.
+
+   [RFC6648]  Saint-Andre, P., Crocker, D., and M. Nottingham,
+              "Deprecating the "X-" Prefix and Similar Constructs in
+              Application Protocols", BCP 178, RFC 6648,
+              DOI 10.17487/RFC6648, June 2012,
+              <https://www.rfc-editor.org/rfc/rfc6648>.
 
 Appendix A.  Acknowledgements
 
