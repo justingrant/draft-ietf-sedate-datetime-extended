@@ -190,7 +190,8 @@ Table of Contents
    In case a suffix repeats a key or otherwise contains conflicting
    tags, implementations MUST give precedence to whichever value is
    positioned first.
-   // I'd rather place a MUST NOT for this case, first.
+   // I'd rather place a MUST NOT for this case, first.  This definitely
+   // needs to be expanded into some general text about error handling.
    //
    // -- --- cabo
 
