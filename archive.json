@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-12-02T00:56:46.316044+00:00",
+  "timestamp": "2021-12-05T01:01:08.925614+00:00",
   "repo": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
   "labels": [
     {
@@ -47,6 +47,16 @@
       "name": "wontfix",
       "description": "This will not be worked on",
       "color": "ffffff"
+    },
+    {
+      "name": "out of scope in -02",
+      "description": "",
+      "color": "B47180"
+    },
+    {
+      "name": "might be solved by -02",
+      "description": "",
+      "color": "B4F0D7"
     }
   ],
   "issues": [
@@ -59,10 +69,12 @@
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "might be solved by -02"
+      ],
       "body": "",
       "createdAt": "2021-10-16T19:35:41Z",
-      "updatedAt": "2021-11-03T17:23:26Z",
+      "updatedAt": "2021-12-03T17:25:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -106,6 +118,13 @@
           "body": "CC @sffc @macchiati to comment about namespacing and extensions.",
           "createdAt": "2021-11-03T17:23:26Z",
           "updatedAt": "2021-11-03T17:23:26Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "-02 has a cleaned up naming and name spacing system.\r\nhttps://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-02.html#section-2.2-4.2 now defines an \"x-\" namespace and restricts usage of that to actual experiments.\r\nIs that what we want to do?\r\nIs that all we need to do?\r\nDiscuss.",
+          "createdAt": "2021-12-03T17:24:41Z",
+          "updatedAt": "2021-12-03T17:24:41Z"
         }
       ]
     },
@@ -118,10 +137,12 @@
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "out of scope in -02"
+      ],
       "body": "The current draft does not say what it actually means when a timezone name is added to a timestamp.\r\n\r\nIs the combination of the timezone name and the timezone offset an assertion that the offset was correct for the named timezone at the time?\r\n\r\nWhat if that assertion is not true?\r\n\r\nWhat about future times?  Does the timezone name take precedence over the offset given (i.e., the timestamp changes its meaning with political decisions) or does the offset win?\r\n",
       "createdAt": "2021-10-20T15:52:39Z",
-      "updatedAt": "2021-10-20T16:31:53Z",
+      "updatedAt": "2021-12-03T17:20:08Z",
       "closedAt": null,
       "comments": [
         {
@@ -137,6 +158,13 @@
           "body": "(From the SEDATE meeting: \"don't encode the timezone if that is not the overriding information\".)\r\n\r\nOne use case is documenting the time zone name, though.",
           "createdAt": "2021-10-20T16:31:53Z",
           "updatedAt": "2021-10-20T16:31:53Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "We now have a clarified scope (#10 as published in -02).\r\nThis makes the underlying issue out of scope -- the RFC 3339 semantics prevail.\r\nDiscuss.",
+          "createdAt": "2021-12-03T17:19:59Z",
+          "updatedAt": "2021-12-03T17:19:59Z"
         }
       ]
     },
@@ -205,10 +233,12 @@
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "out of scope in -02"
+      ],
       "body": "i.e., time without a specified timezone.\r\n",
       "createdAt": "2021-10-20T16:42:28Z",
-      "updatedAt": "2021-10-20T16:47:54Z",
+      "updatedAt": "2021-12-03T17:18:32Z",
       "closedAt": null,
       "comments": [
         {
@@ -243,10 +273,12 @@
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "out of scope in -02"
+      ],
       "body": "",
       "createdAt": "2021-10-20T16:53:07Z",
-      "updatedAt": "2021-10-20T17:00:45Z",
+      "updatedAt": "2021-12-03T17:18:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -398,52 +430,237 @@
       "id": "PR_kwDOGI5hMc4vRfUq",
       "title": "Define scope as per IETF 112.",
       "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/pull/10",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2021-12-01T21:08:23Z",
-      "updatedAt": "2021-12-01T21:08:52Z",
+      "updatedAt": "2021-12-03T16:37:02Z",
       "baseRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
       "baseRefName": "main",
       "baseRefOid": "aeb6e98db411857ff87b30e2ce9b9c9a7cd3db7f",
       "headRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
       "headRefName": "scope",
       "headRefOid": "6b4eabefb7398c6584ad1db99f8bfe4477675320",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2021-12-03T16:37:02Z",
+      "mergedAt": "2021-12-03T16:37:02Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "4cc5428d8317676d675bafbb57cb8e8907bd4626"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOGI5hMc4xBs0f",
+          "commit": {
+            "abbreviatedOid": "6b4eabe"
+          },
+          "author": "brong",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "As a description of one path forward, this is good - and it's sufficient for the proposal that I made.  Good threading of the potential needle here.",
+          "createdAt": "2021-12-03T11:12:24Z",
+          "updatedAt": "2021-12-03T11:12:24Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 11,
       "id": "PR_kwDOGI5hMc4vRquH",
       "title": "Rough draft of simplified key/namespace handling.",
       "url": "https://github.com/ietf-wg-sedate/draft-ietf-sedate-datetime-extended/pull/11",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2021-12-01T22:19:12Z",
-      "updatedAt": "2021-12-01T22:19:13Z",
+      "updatedAt": "2021-12-03T16:37:15Z",
       "baseRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
       "baseRefName": "main",
       "baseRefOid": "aeb6e98db411857ff87b30e2ce9b9c9a7cd3db7f",
       "headRepository": "ietf-wg-sedate/draft-ietf-sedate-datetime-extended",
       "headRefName": "simplify-key-registration",
-      "headRefOid": "d843f20235d2a9d822b889ec855ce46b573b31b0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "d15b351ea7df113c6870698c079e133cf75845c3",
+      "closedAt": "2021-12-03T16:37:15Z",
+      "mergedAt": "2021-12-03T16:37:15Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "0e54f23f0d56a647962084ccd3c858931c09233f"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOGI5hMc4xBrou",
+          "commit": {
+            "abbreviatedOid": "dbd9daf"
+          },
+          "author": "brong",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "This looks generally good - I've put a couple of specific comments.",
+          "createdAt": "2021-12-03T11:06:51Z",
+          "updatedAt": "2021-12-03T11:10:31Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "is this also multiple possible components, or just two components?",
+              "createdAt": "2021-12-03T11:06:51Z",
+              "updatedAt": "2021-12-03T11:10:31Z"
+            },
+            {
+              "originalPosition": 40,
+              "body": "the problem with any MUST NOT when generating values is that you need to define how to parse incorrect inputs, and the choices are either \"reject outright\", \"undefined\" or something like what we have here.",
+              "createdAt": "2021-12-03T11:08:01Z",
+              "updatedAt": "2021-12-03T11:10:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGI5hMc4xBthO",
+          "commit": {
+            "abbreviatedOid": "dbd9daf"
+          },
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-12-03T11:15:36Z",
+          "updatedAt": "2021-12-03T11:15:36Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "My intent was two components; the syntax this inherited also currently only allows two.\r\nThat is certainly not yet a decision, just the way it is being proposed now.\r\n",
+              "createdAt": "2021-12-03T11:15:36Z",
+              "updatedAt": "2021-12-03T11:15:36Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGI5hMc4xBtxy",
+          "commit": {
+            "abbreviatedOid": "dbd9daf"
+          },
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-12-03T11:16:49Z",
+          "updatedAt": "2021-12-03T11:16:49Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "Yes, but defining it as a MUST NOT is a prerequisite to fewer people generating it.\r\n\r\n(The funny space in MUST NOT is working around an RFCXMLv3 grammar bug.)",
+              "createdAt": "2021-12-03T11:16:49Z",
+              "updatedAt": "2021-12-03T11:16:49Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGI5hMc4xBwOq",
+          "commit": {
+            "abbreviatedOid": "c27008e"
+          },
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-12-03T11:28:17Z",
+          "updatedAt": "2021-12-03T11:28:17Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "Yes, we need more text about error handling.\r\nWhat is there now translates into \"put in conflicting information at will, the recipient will sort it out\", which usually leads into an interop nightmare, because they won't (at least not interoperably).\r\nAdded a little todo to that text now.",
+              "createdAt": "2021-12-03T11:28:17Z",
+              "updatedAt": "2021-12-03T11:28:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGI5hMc4xBx8r",
+          "commit": {
+            "abbreviatedOid": "c27008e"
+          },
+          "author": "brong",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-12-03T11:36:34Z",
+          "updatedAt": "2021-12-03T11:36:34Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "I've seen this before as \"creators MUST NOT generate\" and \"if seen, recipients MUST disambuguate as follows\"\r\n\r\n(I meant to type disambiguate, but I do like disambuguate as a word)",
+              "createdAt": "2021-12-03T11:36:34Z",
+              "updatedAt": "2021-12-03T11:36:34Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGI5hMc4xBydO",
+          "commit": {
+            "abbreviatedOid": "c27008e"
+          },
+          "author": "brong",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-12-03T11:39:05Z",
+          "updatedAt": "2021-12-03T11:39:05Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "Might be worth making that explicit here, maybe:\r\n\r\n```\r\nThe key of a tag can be split into a namespace and subkey, by including a single hypen/minus sign\r\n```\r\n\r\n(substitute \"subkey\" with a better descriptor of that part if you have a better name for it - I was thinking \"key name\" but it's pretty ambiguous)",
+              "createdAt": "2021-12-03T11:39:05Z",
+              "updatedAt": "2021-12-03T11:39:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGI5hMc4xCaMv",
+          "commit": {
+            "abbreviatedOid": "d15b351"
+          },
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-12-03T14:28:06Z",
+          "updatedAt": "2021-12-03T14:28:07Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "I'll put disambuguate into the definitions :-)\r\nYes, the combo would be the right thing.\r\nThe second MUST still heavily encourages ignoring the first, though.",
+              "createdAt": "2021-12-03T14:28:07Z",
+              "updatedAt": "2021-12-03T14:28:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGI5hMc4xCaVP",
+          "commit": {
+            "abbreviatedOid": "d15b351"
+          },
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-12-03T14:28:38Z",
+          "updatedAt": "2021-12-03T14:28:39Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "I expanded it a bit:\r\n\r\n```\r\nThe key of a tag can be split into two parts by including a\r\nhyphen/minus sign \"`-`\"; the first part (including the \"`-`\") can then\r\nbe used as a namespace.\r\n```\r\n",
+              "createdAt": "2021-12-03T14:28:38Z",
+              "updatedAt": "2021-12-03T14:28:39Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
