@@ -328,12 +328,11 @@ The latter convention is in actual use, while the former always was
 handicapped by the fact that {{ISO8601}} does not actually allow `-00:00`.
 
 Implementations that needed to express the semantics of `-00:00`
-therefore tended to use `Z` as a "neutral" offset instead.
+therefore tended to use `Z` instead.
 
 This specification updates RFC3339, aligning it with the actual
-practice of interpreting the local offset `Z`: this is no longer
-understood to "imply that UTC is the preferred reference point for the
-specified time".
+practice of interpreting the offset `Z` to mean the same as`-00:00`:
+"the time in UTC is known, but the offset to local time is unknown".
 
 Note that the semantics of the local offset `+00:00` is not updated;
 this retains the implication that UTC is the preferred reference point
@@ -522,20 +521,23 @@ timestamps are inconsistent:
 
 As per {{Section 4.3 of RFC3339}} as updated by {{update}}, IXDTF
 timestamps may also forego indicating local time information in their
-{{RFC3339}} part.
+{{RFC3339}} part by using `Z` instead of a numeric time zone offset.
 The IXDTF timestamps in {{example-consistent}} (which represent the same
 instant in time as the strings in {{example-inconsistent}}) are not
 inconsistent because they do not assert any particular local time nor
 local offset in their {{RFC3339}} part.
-Instead, applications that receive these strings can base their
-local offset and local time calculations on the time zone suffix
-given, i.e., using the Europe/London time zone rules.
+Instead, applications that receive these strings can calculate the
+local offset and local time using the rules of the time zone suffix,
+i.e. Europe/London in the example below.
 
     2022-07-08T00:14:07Z[!Europe/London]
     2022-07-08T00:14:07Z[Europe/London]
-    2022-07-08T00:14:07-00:00[!Europe/London]
-    2022-07-08T00:14:07-00:00[Europe/London]
 {: #example-consistent title="No inconsistency in IXDTF timestamps"}
+
+Note that `-00:00` may be used instead of `Z`, because they have the
+same meaning according to {{update}}, but `-00:00` is incompatible
+ISO-8601 so `Z` is preferred.
+
 
 # Syntax Extensions to RFC 3339 {#extended-format}
 
